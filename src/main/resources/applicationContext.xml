@@ -11,9 +11,12 @@
     <bean id="Тузик" class="ru.goso.school.Dog" />
 
     <bean id="person" class="ru.goso.school.Person">
-        <constructor-arg name="name" value="Иванов"/>
-        <constructor-arg name="age" value="33"/>
-        <constructor-arg name="pet" ref="Мурка"/>
+<!--        <constructor-arg name="name" value="Иванов"/>-->
+<!--        <constructor-arg name="age" value="33"/>-->
+<!--        <constructor-arg name="pet" ref="Мурка"/>-->
+            <property name="name" value="Иванов"/>
+            <property name="age" value="33"/>
+            <property name="pet" ref="Тузик"/>
     </bean>
 
 </beans>

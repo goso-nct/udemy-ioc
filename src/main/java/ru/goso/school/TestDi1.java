@@ -9,6 +9,6 @@ public class TestDi1 {
         Person person = context.getBean("person", Person.class);
         System.out.println(person);
         person.callPet();
-
+        context.close();
     }
 }
