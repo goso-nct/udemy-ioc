@@ -10,4 +10,10 @@
     <bean id="Мурка" class="ru.goso.school.Cat" />
     <bean id="Тузик" class="ru.goso.school.Dog" />
 
+    <bean id="person" class="ru.goso.school.Person">
+        <constructor-arg name="name" value="Иванов"/>
+        <constructor-arg name="age" value="33"/>
+        <constructor-arg name="pet" ref="Мурка"/>
+    </bean>
+
 </beans>
