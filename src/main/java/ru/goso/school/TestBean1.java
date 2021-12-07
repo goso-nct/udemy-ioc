@@ -10,5 +10,6 @@ public class TestBean1 {
         murka.say();
         Pet tuzik = context.getBean("Тузик", Pet.class);
         tuzik.say();
+        context.close();
     }
 }
