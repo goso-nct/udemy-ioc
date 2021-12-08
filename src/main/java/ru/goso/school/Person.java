@@ -6,9 +6,12 @@ public class Person {
     int age;
     Pet pet;
 
-    public Person() {}
+    public Person() {
+        System.out.println("Person constructor no args");
+    }
 
     public Person(String name, int age, Pet pet) {
+        System.out.println("Person constructor 3 args");
         this.name = name;
         this.age = age;
         this.pet = pet;
@@ -35,5 +38,8 @@ public class Person {
     public void setAge(int age) { this.age = age; }
 
     public Pet getPet() { return pet; }
-    public void setPet(Pet pet) { this.pet = pet; }
+    public void setPet(Pet pet) {
+        System.out.println("Person setPet");
+        this.pet = pet;
+    }
 }
