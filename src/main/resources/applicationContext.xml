@@ -7,16 +7,18 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="Мурка" class="ru.goso.school.Cat" />
-    <bean id="Тузик" class="ru.goso.school.Dog" />
+    <context:property-placeholder location="classpath:application.properties" file-encoding="UTF-8" />
+
+    <bean id="мурка" class="ru.goso.school.Cat" />
+    <bean id="тузик" class="ru.goso.school.Dog" />
 
     <bean id="person" class="ru.goso.school.Person">
 <!--        <constructor-arg name="name" value="Иванов"/>-->
 <!--        <constructor-arg name="age" value="33"/>-->
-<!--        <constructor-arg name="pet" ref="Мурка"/>-->
-            <property name="name" value="Иванов"/>
-            <property name="age" value="33"/>
-            <property name="pet" ref="Тузик"/>
+<!--        <constructor-arg name="pet" ref="мурка"/>-->
+            <property name="name" value="${person.name}"/>
+            <property name="age" value="${person.age}"/>
+            <property name="pet" ref="тузик"/>
     </bean>
 
 </beans>
