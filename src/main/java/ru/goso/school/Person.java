@@ -18,7 +18,6 @@ public class Person {
         System.out.println("Person no args constructor");
     }
 
-
     public Person(Pet pet) {
         System.out.println("Person constructor with 1 args: Pet");
         this.pet = pet;

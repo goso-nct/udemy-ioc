@@ -14,6 +14,16 @@ destroy вызывается только у singleton, у prototype нет.
 
 @Autowired - только один конструктор в классе м.б. с этой опцией, и если класс имеет единственный конструктор, то он по умолчанию имеет @Autowired и её можно не писать.  
 @Qualifier("dog") - если имеется несколько подходящих объектов для внедрения, то спрингу нужно указать какой именно внедрить.  
-@Value("значение")
+@Value("значение")  
+
+Конфигурация в AppConfig:
+
+@Configuration  
+@PropertySource("classpath:application.properties")  
+@ComponentScan("ru.goso.school")  
+public class AppConfig {}  
+
+
+
 
 
