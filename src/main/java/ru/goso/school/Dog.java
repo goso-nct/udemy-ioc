@@ -1,8 +1,11 @@
 package ru.goso.school;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Dog implements Pet{
 
-    public Dog() { System.out.println("Dog constructor no args"); }
+    public Dog() { System.out.println("Dog no args constructor"); }
 
     @Override
     public void say() { System.out.println("Гав-гав"); }

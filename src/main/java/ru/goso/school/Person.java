@@ -1,17 +1,29 @@
 package ru.goso.school;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
 
     String name;
     int age;
+    @Autowired @Qualifier("dog")
     Pet pet;
 
     public Person() {
-        System.out.println("Person constructor no args");
+        System.out.println("Person no args constructor");
+    }
+
+
+    public Person(Pet pet) {
+        System.out.println("Person constructor with 1 args: Pet");
+        this.pet = pet;
     }
 
     public Person(String name, int age, Pet pet) {
-        System.out.println("Person constructor 3 args");
+        System.out.println("Person constructor with 3 args: name, age, pet");
         this.name = name;
         this.age = age;
         this.pet = pet;
