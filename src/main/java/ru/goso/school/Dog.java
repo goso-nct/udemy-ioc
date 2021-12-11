@@ -6,4 +6,8 @@ public class Dog implements Pet{
 
     @Override
     public void say() { System.out.println("Гав-гав"); }
+
+    public void init() { System.out.println("Dog init"); }
+
+    public void destroy()  { System.out.println("Dog destroy"); }
 }

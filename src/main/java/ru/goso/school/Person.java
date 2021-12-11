@@ -22,6 +22,10 @@ public class Person {
         pet.say();
     }
 
+    public void init() { System.out.println("Person init"); }
+
+    public void destroy()  { System.out.println("Person destroy"); }
+
     @Override
     public String toString() {
         return "Person{" +

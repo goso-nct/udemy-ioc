@@ -10,9 +10,10 @@
     <context:property-placeholder location="classpath:application.properties" file-encoding="UTF-8" />
 
     <bean id="мурка" class="ru.goso.school.Cat" />
-    <bean id="тузик" class="ru.goso.school.Dog" />
+    <bean id="тузик" class="ru.goso.school.Dog" init-method="init"  destroy-method="destroy"/>
 
-    <bean id="person" class="ru.goso.school.Person">
+    <bean id="person"
+          class="ru.goso.school.Person" scope="singleton" init-method="init" destroy-method="destroy">
 <!--        <constructor-arg name="name" value="Иванов"/>-->
 <!--        <constructor-arg name="age" value="33"/>-->
 <!--        <constructor-arg name="pet" ref="мурка"/>-->
